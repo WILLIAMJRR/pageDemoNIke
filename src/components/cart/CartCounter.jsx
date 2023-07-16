@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 import { ChevronDoubleLeftIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useDispatch } from "react-redux";
@@ -5,7 +6,6 @@ import { setClearCart } from "../../app/CarItemsSlice";
 
 const CartCounter = ({ OffcartToggle,totalQuantity}) => {
 	const dispatch = useDispatch();
-console.log(totalQuantity)
 	const onClearItem = () => {
 		dispatch(setClearCart());
 	};
@@ -45,7 +45,3 @@ console.log(totalQuantity)
 
 export default CartCounter;
 
-CartCounter.propTypes = {
-	OffcartToggle: PropTypes.func.isRequired,
-	totalQuantity: PropTypes.number.isRequired,
-};
